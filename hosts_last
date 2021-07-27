@@ -1,0 +1,15 @@
+[load_balancers]
+frontend1.a1ef.internal
+
+[app_servers]
+app2.a1ef.internal
+app1.a1ef.internal
+
+[database_servers]
+appdb1.a1ef.internal
+
+[all:vars]
+timeout=60
+ansible_user=ec2-user
+ansible_ssh_private_key_file="~/.ssh/a1efkey.pem"
+ansible_ssh_common_args="-o StrictHostKeyChecking=no"
